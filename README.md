@@ -1,9 +1,9 @@
 # scala-utils
 
-A collection of some akka tools I use quiet frequently in my dataflows
+A collection of some akka tools I use quite frequently in my dataflows
 
 ## AggregateSortedGroupFlow
-Take a sorted stream as input and while the key is the same acculate a value for the group. When the key changes output the final result of the accumulator applying an option transform
+Take a sorted stream as input and while the key is the same accumulate a value for the group. When the key changes output the final result of the accumulator applying an optional transform
 ```scala
 // Count groups of sorted things
 import com.kosmyna.util.streams.AggregateSortedGroupFlow
@@ -36,6 +36,7 @@ Source(Stream.from(1))
 ```
 
 ## AsyncRetryFlow
+Flow that makes it easy to retry async calls like things going over a network
 ```scala
 import akka.stream.scaladsl.{ Sink, Source }
 import com.kosmyna.util.streams.AsyncRetryFlow
