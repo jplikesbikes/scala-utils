@@ -67,7 +67,7 @@ val indexStats = Flow[Seq[BulkCompatibleRequest]]
     .runWith(IndexStats.perIndexStats())
 ```
 
-## SearchCheckerFlow
+## SortCheckerFlow
 A simple flow that will throw an exception if the data running through it isn't sorted
 ```scala
 import akka.stream.scaladsl.{ Sink, Source }
